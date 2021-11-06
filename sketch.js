@@ -5,7 +5,7 @@ var balloon, balloonImg
 
 function preload(){
 bgImg = loadImage("assets/bg.png")
-
+jumpSound = loadSound("assets/jump.mp3");
 balloonImg = loadAnimation("assets/balloon1.png","assets/balloon2.png","assets/balloon3.png")
 }
 
@@ -39,7 +39,7 @@ function draw() {
           //making the hot air balloon jump
           if(keyDown("space")) {
             balloon.velocityY= -6 ;
-            
+            jumpSound.play();
           }
 
           //adding gravity
